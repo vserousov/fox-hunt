@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>UI Components</title>
+	<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+	<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)" href="lib/tau/wearable/theme/default/tau.circle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="ui-page ui-page-active" id="main">
+		<header class="ui-header">
+			<h2 class="ui-title">Fox hunt</h2>
+		</header>
+		<div class="ui-content">
+			<p>Distance to destination: <span id="distance-text"></span></p>
+			<!--  <p><input type="text" id="distance" name="distance" /></p> -->
+		</div>
+		
+		<footer class="ui-footer" align="center">
+			<button class="ui-btn">Start game</button>
+		</footer>
+	</div>
+	<script type="text/javascript" src="lib/tau/wearable/js/tau.js"></script>
+	<script type="text/javascript" src="js/circle-helper.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/lowBatteryCheck.js"></script>
+</body>
+</html>
