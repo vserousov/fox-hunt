@@ -23,6 +23,7 @@ const game = function() {
 	var interval;
 	var dev_id;
 	var game_id;
+	var foxes_found = 0;
 	
 	function generate_id() {
 		words = ["seoul", "moscow", "montreal", "dublin"];
@@ -80,13 +81,22 @@ const game = function() {
 	    }	
 	}
 	
+	function registerFound() {
+		foxes_found++;
+		$("#img" + foxes_found).show();
+	}
+	
 	function handleUpdate(response) {
-		console.log("Update response received: " + response.status);
+		console.log("Update response received: " + response.status);		
 		
 		if (response.status == "ok") {
 			$("#distance-text").text(response.distance);
 		}
 		else {
+			if (response.status == "found") {
+				registerFound()
+			}
+			
 			$("#distance-text").text(response.status);
 		}
 	}
